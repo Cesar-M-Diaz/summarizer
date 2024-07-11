@@ -1,5 +1,5 @@
 {
-  "name": "summarizer",
+  "name": "cpu-summarizer-for-datasets",
   "version": "1.0.0",
   "description": "summarize cpu profiles for creating datasets",
   "main": "index.js",
