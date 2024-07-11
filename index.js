@@ -72,7 +72,7 @@ function summarizeCPUProfile(profile, name) {
     endTime: profile.endTime / 1000
   }
   
-  return JSON.stringify(summary)
+  return `{"messages":[{"role":"user","content":"Given the following CPU profile data: "${JSON.stringify(summary)}" answer the following question: <question>"},{"role":"assistant","content":"<Here goes the AI response>"}]}`
 }
 
 const args = process.argv.slice(2);
@@ -83,7 +83,7 @@ if (args.length !== 1) {
 }
 
 const file = args[0];
-const outputFileName = path.basename(file, path.extname(file)) + '.summary.json';
+const outputFileName = path.basename(file, path.extname(file)) + '.summary.jsonl';
 const outputDir = path.join(__dirname, 'summaries')
 const outputFilePath = path.join(outputDir, outputFileName);
 

@@ -30,11 +30,17 @@ For example:
 node index.js profiles/myAppProfile.cpuprofile
 ```
 
-The tool will process the CPU profile and generate a summary file in the summaries directory, located in the same directory as index.js. The summary file will be named after the original profile file, with a .summary.json extension.
+The tool will process the CPU profile and generate a summary file in the summaries directory, located in the same directory as index.js. The summary file will be named after the original profile file, with a .summary.jsonl extension.
 
 ## Output
 
-The summary file contains the following information:
+The tool will return the prompt with the data you will only have to add your question and your answer
+
+```jsonl
+{"messages":[{"role":"user","content":"Given the following CPU profile data: summary} answer the following question: < your question>"},{"role":"assistant","content":"<Here goes the AI response>"}]}
+```
+
+The summary contains the following information:
 
 topSelfTimeFunctions: Functions with the highest self execution times.
 topTotalTimeFunctions: Functions with the highest total execution times.
