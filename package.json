@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@ns-private/cpu-profile-massager": "^1.4.1",
+    "lodash": "^4.17.21"
+  }
 }
